@@ -78,7 +78,7 @@ export default function Desafio() {
               </Col>
               <Col className="d-flex align-items-center p-0">
                 <img
-                  src="/triangle.svg"
+                  src="/static/triangle.svg"
                   alt="Triângulo para calcular"
                   width={240}
                   height={140}

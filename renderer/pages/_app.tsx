@@ -6,7 +6,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.png" type="image/png" sizes="16x16" />
+        <link
+          rel="icon"
+          href="/static/favicon.png"
+          type="image/png"
+          sizes="16x16"
+        />
         <title>Desafio Cromai | Pitágoras</title>
       </Head>
       <Component {...pageProps} />

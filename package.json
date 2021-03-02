@@ -46,6 +46,6 @@
       "description": "Calculadora do Teorema de Pitágoras",
       "category": "Utility"
     },
-    "icon": "renderer/public/favicon.png"
+    "icon": "renderer/public/static/favicon.png"
   }
 }
