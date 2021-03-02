@@ -15,13 +15,17 @@ import api from '../services/api';
 import styles from '../styles/pages/Desafio.module.css';
 
 export default function Desafio() {
-  const [hypotenuse, setHypotenuse] = useState(Number || undefined);
+  const [hypotenuse, setHypotenuse] = useState<undefined | number>();
   const [oppositeSide, setOppositeSide] = useState(3);
   const [adjacentSide, setAdjacentSide] = useState(4);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState(String);
+  const [loadingMessage, setLoadingMessage] = useState<null | string>();
 
   function handleCaculate(e: FormEvent) {
     e.preventDefault();
+
+    if (loadingMessage === undefined)
+      setLoadingMessage('Aguardando o servidor');
 
     api
       .post('/calculate', {
@@ -30,10 +34,13 @@ export default function Desafio() {
       })
       .then((res) => {
         setHypotenuse(res.data.hypotenuse);
+        setLoadingMessage('');
       })
       .catch((err) => {
         console.log(err);
+        setLoadingMessage(undefined);
         setErrorMessage(String(err));
+        setHypotenuse(undefined);
 
         setTimeout(() => {
           setErrorMessage('');
@@ -44,6 +51,14 @@ export default function Desafio() {
   return (
     <Container className={styles.container}>
       <NavBar />
+      {loadingMessage && (
+        <div className="d-flex justify-content-center">
+          <Alert variant="warning" className="w-25 text-center p-1">
+            {/* <Alert.Heading>Ocorreu um erro ☹!</Alert.Heading> */}
+            <p className="mb-0">{loadingMessage}</p>
+          </Alert>
+        </div>
+      )}
       {errorMessage && (
         <div className="d-flex justify-content-center">
           <Alert variant="danger" className="w-25 text-center p-1">

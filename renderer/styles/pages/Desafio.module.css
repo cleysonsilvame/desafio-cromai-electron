@@ -25,6 +25,12 @@
   margin-left: -4.8em;
 }
 
+@media (max-width: 600px) {
+  .colInputHypot > div {
+    margin-left: -3.8em;
+  }
+}
+
 .container button {
   background: var(--green);
   width: 380px;
