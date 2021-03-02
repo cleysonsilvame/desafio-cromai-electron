@@ -80,8 +80,8 @@ export default function Desafio() {
                 <img
                   src="/triangle.svg"
                   alt="Triângulo para calcular"
-                  width={500}
-                  height={340}
+                  width={240}
+                  height={140}
                 />
               </Col>
               <Col
