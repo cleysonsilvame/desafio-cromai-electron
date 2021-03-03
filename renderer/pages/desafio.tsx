@@ -108,6 +108,7 @@ export default function Desafio() {
                     id="inputHypotenuse"
                     type="number"
                     readOnly={true}
+                    disabled
                     className="form-control text-center"
                     onChange={(e) => {
                       setHypotenuse(Number(e.target.value));
