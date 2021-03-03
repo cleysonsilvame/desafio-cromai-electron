@@ -1,6 +1,54 @@
-# Electron with Typescript application example
+<h1 align="center">
+  <img alt="Logo Desafio Cromai | Teorema de Pitágoras" title="Teorema de Pitágoras" src=".github/logo-pitagoras.svg" width="420px" />
+</h1>
 
-This example show how you can use Next.js inside an Electron application to avoid a lot of configuration, use Next.js router as view and use server-render to speed up the initial render of the application. Both Next.js and Electron layers are written in TypeScript and compiled to JavaScript during the build process.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-requisitos-da-aplicação">Requisitos da aplicaçao</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cleysonsilvame/desafio-cromai-electron/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/cleysonsilvame/desafio-cromai-electron.svg">
+  </a>
+
+  <a href="https://github.com/cleysonsilvame/desafio-cromai-electron/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/cleysonsilvame/desafio-cromai-electron.svg">
+  </a>
+
+  <img alt="GitHub" src="https://img.shields.io/github/license/cleysonsilvame/desafio-cromai-electron.svg">
+</p>
+
+<p float="center">
+  <img alt="App Teorema de Pitágoras" src=".github/notebook.png" width="100%" >
+</p>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- Electron
+- React.js
+- Next.js
+- Typescript
+- JavaScript
+
+## 💻 Projeto
+
+### Desafio proposto pela empresa Cromai
+
+A missão era desenvolver um fork do front-end em [React](https://github.com/cleysonsilvame/desafio-cromai) para Electron que fosse capaz de resolver o cálculo do Teorema de Pitágoras.
+Conectado a uma [API em Python](https://github.com/cleysonsilvame/desafio-cromai-api) com Flask para servir o cálculo.
+
+## ⚙️ Requisitos da aplicação
+
+- Node
+- Yarn ou NPM
+- Rodar o servidor em python disponível [aqui](https://github.com/cleysonsilvame/desafio-cromai-api), ou usar o deploy feito no heroku com este caminho: https://desafio-cromai-api.herokuapp.com
+- Entedimento desta portabilidade
 
 | Part       | Source code (Typescript) | Builds (JavaScript) |
 | ---------- | ------------------------ | ------------------- |
@@ -8,35 +56,37 @@ This example show how you can use Next.js inside an Electron application to avoi
 | Electron   | `/electron-src`          | `/main`             |
 | Production |                          | `/dist`             |
 
-For development it's going to run a HTTP server and let Next.js handle routing. In production it use `next export` to pre-generate HTML static files and use them in your app instead of running an HTTP server.
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## 🔧 Setup
 
 ```bash
-npx create-next-app --example with-electron-typescript with-electron-typescript-app
-# or
-yarn create next-app --example with-electron-typescript with-electron-typescript-app
+#.env.example para .env.local e definir a URL da api
+NEXT_PUBLIC_API_URL=http://localhost:5000
+
+#terminal
+npm install
+#ou
+yarn
+
+#terminal
+npm run dev
+#ou
+yarn dev
 ```
 
-Available commands:
+## :memo: Licença
 
-```bash
-"build-renderer": build and transpile Next.js layer
-"build-electron": transpile electron layer
-"build": build both layers
-"dev": start dev version
-"dist": create production electron build
-"type-check": check TypeScript in project
-```
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Notes
+### 🙋‍♂️ Autor
 
-You can create the production app using `npm run dist`.
+---
 
-_note regarding types:_
+<a href="https://github.com/cleysonsilvame/" title="Cleyson Silva">
+ <img style="border-radius: 50%;" src="https://raw.githubusercontent.com/cleysonsilvame/cleysonsilvame/master/.github/cleyson-rounded.png" width="100px;" alt="Cleyson Silva">
+ <br />
 
-- Electron provides its own type definitions, so you don't need @types/electron installed!
-  source: https://www.npmjs.com/package/@types/electron
-- There were no types available for `electron-next` at the time of creating this example, so until they are available there is a file `electron-next.d.ts` in `electron-src` directory.
+<sub><b>Cleyson Silva</b></sub> 🚀</a>
+
+👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Cleyson_Silva-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/cleyson-silva-639b01188/) [![Gmail Badge](https://img.shields.io/badge/-cleysonsilva.me@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:cleysonsilva.me@gmail.com)](mailto:cleysonsilva.me@gmail.com)
