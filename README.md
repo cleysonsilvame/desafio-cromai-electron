@@ -59,7 +59,7 @@ Conectado a uma [API em Python](https://github.com/cleysonsilvame/desafio-cromai
 ## 🔧 Setup
 
 ```bash
-#.env.example para .env.local e definir a URL da api
+#renderer/.env.example para renderer/.env.local e definir a URL da api
 NEXT_PUBLIC_API_URL=http://localhost:5000
 
 #terminal
